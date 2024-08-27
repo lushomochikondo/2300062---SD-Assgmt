@@ -1,31 +1,5 @@
 # Software Design
-# Analysis:
 
-# 1. SOLID Principles
-Single Responsibility Principle (SRP):
-The StudentDatabase class is doing too many things. It handles storing students, adding, removing, updating them, and even searching. This makes the class bulky and harder to manage.
-If you need to change how students are updated or add a new feature, you might end up tweaking the class in several places, which can introduce bugs.
-
-
-# Interface Segregation Principle (ISP):
- If you have an interface with many methods, classes that don’t need all those methods are forced to implement them. This can make your code harder to work with.
-If a class only needs to manage students in memory, it shouldn’t be forced to handle file operations.
-
-# Dependency Inversion Principle (DIP):
-The StudentManagementSystem directly depends on the StudentDatabase. This means any changes in StudentDatabase could potentially impact StudentManagementSystem.
-If StudentDatabase changes its internal workings, you might need to update StudentManagementSystem as well.
-
-# 2. DRY (Don’t Repeat Yourself)
-The code for searching students by ID, name, or major is quite similar and repeated in multiple places. This makes the code harder to maintain and more prone to errors.
-The logic for checking each student’s details is duplicated across different methods.
-
-# 3. KISS (Keep It Simple Stupid)
-The menu system is a bit complex and could be simplified. Having many separate methods for different operations makes the system more complicated than necessary.
-Instead of having lots of individual methods for each menu option, consolidating related operations could make the code simpler and easier to follow.
-
-# 4. YAGNI (You Ain’t Gonna Need It)
-Some features, like saving and loading data from files, might not be necessary if the system is only meant for quick, in-memory operations.
-If the system is only used for a single session and doesn’t need to remember data between runs, file operations might be overkill.
 
 
 # Refactoring:
