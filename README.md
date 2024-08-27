@@ -70,3 +70,31 @@ Enter 5 to exit the system.
 Syntax Errors: If you encounter any syntax errors, ensure that the code is copied correctly and matches the formatting of the provided code.
 Python Version Compatibility: Make sure you're using a compatible Python version (Python 3.x). The code may not work with Python 2.x.
 Input Validation: The code assumes valid input. Adding more comprehensive input validation can make the script more robust.
+
+
+# Code Changes Documentation
+Student Class:
+
+Attributes: id, name, age, major
+Methods:
+__init__(self, student_id, name, age, major): Initializes a student object.
+update(self, name=None, age=None, major=None): Updates student details.
+display(self): Displays student details.
+StudentDatabase Class:
+
+# Attributes: students (dictionary)
+Methods:
+__init__(self): Initializes the database with an empty dictionary.
+add_student(self, student): Adds a student to the database.
+remove_student(self, student_id): Removes a student from the database by ID.
+update_student(self, student_id, name=None, age=None, major=None): Updates a student's information.
+display_all_students(self): Displays all students in the database.
+StudentManagementSystem Class:
+
+# Attributes: database (instance of StudentDatabase)
+Methods:
+__init__(self, database): Initializes the management system with a database.
+show_menu(self): Displays the menu and handles user input.
+add_new_student(self): Handles adding a new student.
+delete_student(self): Handles removing a student.
+update_student_info(self): Handles updating student information.
